@@ -1,0 +1,12 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: wiringPi-gpiod
+Description: "A generic wiringPi-implementation for single-board computers."
+Requires: libgpiod
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lwiringpi-gpiod
+Cflags: -I${includedir}
+Conflicts:
